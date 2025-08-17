@@ -1,5 +1,492 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
 .page {
-  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  background-color: var(--bg-color);
+  background-image: var(--bg-image);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: var(--main-font), monospace;
+  font-size: 18px;
+  line-height: 1.3;
+  color: var(--text-color);
+}
+
+.header {
+  position: relative;
+  display: grid;
+  grid-template-rows: 1fr auto 1fr;
+  align-items: center;
+  min-height: 100vh;
+  padding: 10px;
+}
+
+.header__theme-menu {
+  justify-self: end;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.header__theme-menu-button {
+  background-color: transparent;
+  border: none;
+  padding: 0 13px;
+  cursor: pointer;
+  color: var(--accent-color);
+  text-transform: lowercase;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.header__theme-menu-button_active {
+  pointer-events: none;
+  border: 1px solid var(--menu-button-active);
+}
+
+.header__theme-menu-button:hover {
+  border: 1px solid var(--menu-button-hover);
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  border-bottom: 1px solid var(--menu-button-focus);
+}
+
+.header__rec {
+  position: absolute;
+  top: 10px;
+  right: 38px;
+  color: var(--accent-color);
+  text-transform: uppercase;
+}
+
+.header__rec::after {
+  content: "";
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  box-shadow: 0 0 4px 2px var(--accent-color);
+  top: 50%;
+  right: -20px;
+  transform: translateY(-50%);
+}
+
+.header__title {
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  color: var(--title-color);
+  text-shadow: 4px 4px 0 var(--accent-color);
+  line-height: 0.825;
+  letter-spacing: 0.175em;
+}
+
+.header__text {
+  justify-self: end;
+  width: 46.4%;
+  font-weight: 700;
+  background-color: var(--accent-color);
+  color: var(--text-accent-color);
+  padding: 0 12px;
+  margin-right: 11px;
+  margin-bottom: 142px;
+}
+
+.content {
+  padding: 40px 10px;
+  background-color: var(--bg-color);
+}
+
+.section {
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.section--compact {
+  padding-top: 60px;
+}
+
+.section__title {
+  color: var(--accent-color);
+  font-size: 18px;
+  position: absolute;
+  top: 38px;
+  left: 0;
+  width: 100%;
+}
+
+.section--raised .section__title {
+  top: 12px;
+}
+
+.section__content {
+  display: grid;
+  gap: 20px;
+}
+
+.section__content--right {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 0px;
+}
+
+.section__left-column {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding-top: 30px;
+}
+
+.section__right-column {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+
+.card__title {
+  font-size: 18px;
+  background-color: var(--accent-color);
+  color: var(--text-accent-color);
+  padding: 2px 10px;
+}
+
+.card__text {
+  color: var(--text-color);
+  line-height: 1.5;
+  margin-bottom: 0px;
+}
+
+.title-decor {
+  background-color: var(--accent-color);
+  color: var(--text-accent-color);
+  margin-bottom: 9px;
+}
+
+.section--advice .advice-header-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.section--advice .section__title {
+  text-align: left;
+  margin-left: 0;
+  width: 100%;
+  order: 2;
+  margin-top: 0;
+}
+
+.section--advice .advice-caption {
+  text-align: left;
+  margin-left: 0;
+  width: 100%;
+  font-style: italic;
+  order: 1;
+  margin-bottom: 10px;
+}
+
+.section--advice .section__right-column {
+  gap: 20px;
+}
+
+.section--raised .card {
+  margin-top: 75px;
+}
+
+.section--advice .card {
+  margin-top: 0;
+}
+
+.gallery {
+  padding: 40px 20px;
+  position: relative;
+  min-height: 1111px;
+}
+
+.gallery__title {
+  font-size: 18px;
+  position: absolute;
+  top: 0;
+  left: 20px;
+  width: 983px;;
+}
+
+.gallery__grid {
+  display: block;
+  position: relative;
+  height: 100%;
+}
+
+.gallery__image {
+  position: absolute;
+  object-fit: cover;
+}
+
+.gallery__image:nth-child(1) {
+  width: 650px;
+  height: 260px;
+  top: 53px;
+  left: 1px;
+}
+
+.gallery__image:nth-child(2) {
+  width: 314px;
+  height: 595px;
+  top: 53px;
+  left: 671px;
+}
+
+.gallery__image:nth-child(3) {
+  width: 315px;
+  height: 768px;
+  top: 333px;
+  left: 1px;
+}
+
+.gallery__image:nth-child(4) {
+  width: 315px;
+  height: 315px;
+  top: 333px;
+  left: 336px;
+}
+
+.gallery__image:nth-child(5) {
+  width: 649px;
+  height: 433px;
+  top: 668px;
+  left: 336px;
+}
+
+.footer {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.footer__title {
+  font-size: 187px;
+  letter-spacing: 3px;
+  color: var(--title-color);
+  text-shadow: 2px 2px 0 var(--accent-color);
+  margin-bottom: 91px;
+}
+
+.decorated-zone::before,
+.decorated-zone::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+}
+
+.decorated-zone::before {
+  border-top: 1px solid var(--decor-color);
+  border-right: 1px solid var(--decor-color);
+  top: 10px;
+  right: 10px;
+}
+
+.decorated-zone::after {
+  border-bottom: 1px solid var(--decor-color);
+  border-left: 1px solid var(--decor-color);
+  bottom: 10px;
+  left: 10px;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .header {
+    padding: 0px;
+  }
+  
+  .header__rec {
+    top: 13px;
+    right: 38px;
+  }
+  
+  .header__title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+  
+  .content {
+    padding: 0px 10px;
+  }
+  
+  .section {
+    margin-bottom: 58px;
+  }
+  
+  .section--compact {
+    padding-top: 32px;
+  }
+  
+  .section--advice .advice-header-wrapper {
+    margin-right: 10%;
+  }
+  
+  .section__content {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .section__content--right {
+    grid-template-columns: 1fr 2fr;
+  }
+  
+  .gallery {
+    padding: 1px 1px;
+    min-height: 823px;
+  }
+  
+  .decorated-zone::before {
+    top: 12px;
+    right: 12px;
+  }
+  
+  .decorated-zone::after {
+    bottom: 28px;
+    left: 12px;
+  }
+
+  .gallery__image:nth-child(1) {
+    width: 728px;
+    height: 780px;
+    top: 43px;
+    left: 20px;
+  }
+
+  .gallery__image:nth-child(2) {
+    width: 229px;
+    height: 442px;
+    top: 43px;
+    left: 519px;
+  }
+
+  .gallery__image:nth-child(3) {
+    width: 229px;
+    height: 568px;
+    top: 255px;
+    left: 20px;
+  }
+
+  .gallery__image:nth-child(4) {
+    width: 230px;
+    height: 230px;
+    top: 255px;
+    left: 269px;
+  }
+
+  .gallery__image:nth-child(5) {
+    width: 479px;
+    height: 318px;
+    top: 505px;
+    left: 269px;
+  }
+}
+
+@media (max-width: 767px) {
+  .section--compact {
+    padding-top: 40px;
+  }
+  
+  .section__title {
+    top: 10px;
+  }
+  
+  .section__left-column {
+    padding-top: 20px;
+    gap: 30px;
+  }
+  
+  .section--advice .advice-header-wrapper,
+  .section--advice .section__title,
+  .section--advice .advice-caption {
+    width: 100%;
+    text-align: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .gallery {
+    min-height: auto;
+    padding: 40px 10px;
+  }
+  
+  .gallery__grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .gallery__image {
+    position: static !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .gallery__image:nth-child(1) {
+    height: 142px;
+  }
+
+  .gallery__image:nth-child(2) {
+    height: 355px;
+  }
+
+  .gallery__image:nth-child(3) {
+    height: 237px;
+  }
+
+  .gallery__image:nth-child(4) {
+    height: 355px;
+  }
+
+  .gallery__image:nth-child(5) {
+    height: 237px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header__theme-menu {
+    justify-self: center;
+    align-self: start;
+  }
+  
+  .header__theme-menu-list {
+    flex-direction: row;
+  }
+
+  .section--advice .advice-header-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: end;
+    gap: 0px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+  
+  .section--advice .section__title {
+    grid-column: 2;
+    order: 1;
+    margin-top: 13px;
+    max-width: 649px;
+    margin-left: 327px;
+  }
+  
+  .section--advice .advice-caption {
+    grid-column: 1;
+    order: 2;
+    text-align: left;
+    margin-bottom: 0;
+  }
 }
