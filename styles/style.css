@@ -499,7 +499,7 @@
 
 @media (min-width: 1024px) {
   .header {
-    padding: 20px;
+    padding: 4px;
   }
   
   .header__theme-menu {
@@ -509,6 +509,7 @@
   
   .header__theme-menu-list {
     flex-direction: row;
+    margin-top: 0px;
   }
   
   .header__rec {
@@ -523,7 +524,8 @@
   
   .header__text {
     width: 490px;
-    margin-bottom: 109px;
+    margin-bottom: 125px;
+    margin-right: 16px;
   }
   
   .content {
