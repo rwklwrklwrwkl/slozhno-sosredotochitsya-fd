@@ -9,10 +9,11 @@
   --menu-button-focus: #ff0070;
   --decor-color: #ff0070;
   --text-accent-color: #000028;
+  --accept-color: #ff0070;
 }
 
 @media (prefers-color-scheme: light) {
-  :root {
+  :root.theme-auto {
     --bg-color: #fff1f7;
     --bg-image: url("../images/cover-image-light.png");
     --text-color: #353430;
@@ -23,5 +24,28 @@
     --menu-button-focus: #353430;
     --decor-color: #353430;
     --text-accent-color: #353430;
+    --accept-color: #353430;
   }
+  
+  :root.theme-auto .header__rec {
+    display: none;
+  }
+}
+
+:root.theme-light {
+  --bg-color: #fff1f7;
+  --bg-image: url("../images/cover-image-light.png");
+  --text-color: #353430;
+  --accent-color: #ff8dcb;
+  --title-color: #ffc2e6;
+  --menu-button-active: #353430;
+  --menu-button-hover: rgba(50, 49, 45, 0.4);
+  --menu-button-focus: #353430;
+  --decor-color: #353430;
+  --text-accent-color: #353430;
+  --accept-color: #353430;
+}
+
+:root.theme-light .header__rec {
+  display: none;
 }
