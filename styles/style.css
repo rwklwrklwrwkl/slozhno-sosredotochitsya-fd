@@ -19,7 +19,7 @@
   display: grid;
   grid-template-rows: 1fr auto 1fr;
   align-items: center;
-  min-height: 100vh;
+  min-height: 668px;
   min-height: clamp(668px, 100vh, 1024px);
   padding: 10px 0;
 }
@@ -113,7 +113,6 @@
 
 .content {
   padding: 40px 0;
-  background-color: var(--bg-color);
 }
 
 .section {
@@ -147,7 +146,7 @@
   align-items: start;
 }
 
-.section__content--multi-column {
+.section__content--card-column {
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
@@ -170,7 +169,7 @@
   display: flex;
   flex-direction: column;
   gap: 0px;
-  margin-top: -10px;
+  margin-top: 0px;
 }
 
 .card__title {
@@ -273,7 +272,7 @@
   position: relative;
   display: grid;
   place-items: center;
-  min-height: 100vh;
+  min-height: 668px;
   min-height: clamp(668px, 100vh, 1024px);
   padding: 10px 0;
 }
@@ -411,7 +410,7 @@
     margin-bottom: 20px;
   }
   
-  .section__content--multi-column {
+  .section__content--card-column {
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
   }
@@ -523,20 +522,21 @@
   }
   
   .section {
-    margin-bottom: 145px;
+    margin-bottom: 161px;
+    padding: 4px 0;
   }
   
   .section__title {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
   
-  .section__content--multi-column {
+  .section__content--card-column {
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
   }
   
   .section:nth-child(1) .section__main-content {
-    gap: 20px;
+    gap: 0px;
   }
   
   .section:nth-child(1) .card {
@@ -552,7 +552,7 @@
     padding-top: 10px;
   }
   
-  .section:nth-child(2) .section__content--multi-column {
+  .section:nth-child(2) .section__content--card-column {
     gap: 20px;
   }
   
@@ -593,7 +593,7 @@
   }
   
   .section--tips .card--advice {
-    margin-bottom: 21px;
+    margin-bottom: 31px;
   }
   
   .section--tips .card--advice:first-child {
@@ -601,7 +601,7 @@
   }
   
   .section--tips .card--advice .card__title {
-    padding: 0px 13px;
+    padding: 0px 0px;
     margin-bottom: 13px;
   }
   
@@ -610,7 +610,7 @@
   }
   
   .gallery {
-    padding: 15px 0;
+    padding: 0px 0;
   }
   
   .gallery__grid {
@@ -650,7 +650,7 @@
   }
   
   .footer {
-    padding: 20px 0;
+    padding: 0px 0;
   }
   
   .footer__title {
