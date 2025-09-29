@@ -1,4 +1,3 @@
-
 .page {
   background-color: var(--bg-color);
   background-image: var(--bg-image);
@@ -112,22 +111,22 @@
 }
 
 .content {
-  padding: 40px 0;
+  padding: 40px 0 20px; /* Уменьшил нижний отступ */
 }
 
 .section {
-  margin-bottom: 50px;
+  margin-bottom: 40px; /* Уменьшил отступ между секциями */
   position: relative;
 }
 
 .section--compact {
-  padding-top: 20px;
+  padding-top: 0; /* Убрал верхний отступ */
 }
 
 .section__title {
   color: var(--accept-color);
   font-size: 18px;
-  margin-bottom: 20px;
+  margin-bottom: 15px; /* Уменьшил отступ */
   font-weight: 700;
   line-height: 1.3;
   word-break: break-word;
@@ -136,7 +135,7 @@
 .section__content {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 15px; /* Уменьшил gap */
 }
 
 .section__content--decorated {
@@ -149,14 +148,14 @@
 .section__content--card-column {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 20px;
+  gap: 15px; /* Уменьшил gap */
 }
 
 .section__decor {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  padding-top: 10px;
+  gap: 15px; /* Уменьшил gap */
+  padding-top: 5px; /* Уменьшил отступ */
 }
 
 .section__main-content {
@@ -187,7 +186,7 @@
   line-height: 1.3;
   margin: 0;
   font-size: 18px;
-  padding-top: 10px;
+  padding-top: 8px; /* Уменьшил отступ */
 }
 
 .card__title--regular {
@@ -202,8 +201,8 @@
 .tips-header {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  margin-bottom: 10px;
+  gap: 15px; /* Уменьшил gap */
+  margin-bottom: 5px; /* Уменьшил отступ */
 }
 
 .tips-header__main {
@@ -225,7 +224,7 @@
 }
 
 .card--advice {
-  margin-bottom: 15px;
+  margin-bottom: 12px; /* Уменьшил отступ */
   position: relative;
 }
 
@@ -240,17 +239,17 @@
 
 .card--advice .card__text {
   margin: 0;
-  padding: 10px 0 0 0;
+  padding: 8px 0 0 0; /* Уменьшил отступ */
 }
 
 .gallery {
-  padding: 10px 0;
+  padding: 0; /* Убрал отступы */
   position: relative;
 }
 
 .gallery__title {
   font-size: 23px;
-  margin-bottom: 14px;
+  margin-bottom: 10px; /* Уменьшил отступ */
   font-weight: 700;
   line-height: 1.3;
 }
@@ -258,7 +257,7 @@
 .gallery__grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 10px;
+  gap: 8px; /* Уменьшил gap */
 }
 
 .gallery__image {
@@ -308,51 +307,51 @@
   }
   
   .content {
-    padding: 40px 0;
+    padding: 30px 0 15px; /* Уменьшил отступы */
   }
   
   .section {
-    margin-bottom: 40px;
+    margin-bottom: 30px; /* Уменьшил отступ */
   }
   
   .section--compact {
-    padding-top: 30px;
+    padding-top: 0; /* Убрал отступ */
   }
   
   .section__title {
-    margin-bottom: 15px;
+    margin-bottom: 12px; /* Уменьшил отступ */
   }
   
   .section__content--decorated {
     grid-template-columns: 1fr;
-    gap: 15px;
+    gap: 12px; /* Уменьшил gap */
   }
   
   .section__decor {
-    padding-top: 10px;
-    gap: 15px;
+    padding-top: 5px; /* Уменьшил отступ */
+    gap: 12px; /* Уменьшил gap */
   }
   
   .section__main-content {
-    gap: 15px;
+    gap: 12px; /* Уменьшил gap */
   }
   
   .tips-header {
-    gap: 15px;
-    margin-bottom: 10px;
+    gap: 12px; /* Уменьшил gap */
+    margin-bottom: 5px; /* Уменьшил отступ */
   }
   
   .card--advice {
-    margin-bottom: 12px;
+    margin-bottom: 10px; /* Уменьшил отступ */
   }
   
   .gallery {
-    padding: 20px 0;
+    padding: 0; /* Убрал отступы */
   }
   
   .gallery__grid {
     grid-template-columns: 1fr;
-    gap: 8px;
+    gap: 6px; /* Уменьшил gap */
   }
   
   .footer {
@@ -399,37 +398,37 @@
   }
   
   .content {
-    padding: 60px 0;
+    padding: 50px 0 30px; /* Уменьшил отступы */
   }
   
   .section {
-    margin-bottom: 80px;
+    margin-bottom: 60px; /* Уменьшил отступ */
   }
   
   .section__title {
-    margin-bottom: 20px;
+    margin-bottom: 15px; /* Уменьшил отступ */
   }
   
   .section__content--card-column {
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: 15px; /* Уменьшил gap */
   }
   
   .tips-header {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    gap: 20px;
-    margin-bottom: 15px;
+    gap: 15px; /* Уменьшил gap */
+    margin-bottom: 10px; /* Уменьшил отступ */
   }
   
   .gallery {
-    padding: 25px 0;
+    padding: 0; /* Убрал отступы */
   }
   
   .gallery__grid {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, auto);
-    gap: 20px;
+    gap: 15px; /* Уменьшил gap */
   }
   
   .gallery__image:nth-child(1) {
@@ -497,13 +496,13 @@
   
   .header__theme-menu-list {
     flex-direction: row;
-    margin-top: 0px;
-    gap: 10px;
+    margin-top: 13px;
+    gap: 29px;
   }
   
   .header__rec {
     top: 20px;
-    right: 48px;
+    right: 29px;
   }
   
   .header__title {
@@ -518,21 +517,21 @@
   }
   
   .content {
-    padding: 0px 0;
+    padding: 0px 0 20px; /* Уменьшил нижний отступ */
   }
   
   .section {
-    margin-bottom: 161px;
-    padding: 4px 0;
+    margin-bottom: 143px; /* Уменьшил отступ */
+    padding: 0px 0; /* Убрал отступы */
   }
   
   .section__title {
-    margin-bottom: 10px;
+    margin-bottom: 15px; /* Уменьшил отступ */
   }
   
   .section__content--card-column {
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: 15px; /* Уменьшил gap */
   }
   
   .section:nth-child(1) .section__main-content {
@@ -540,7 +539,7 @@
   }
   
   .section:nth-child(1) .card {
-    padding-top: 34px;
+    padding-top: 20px; /* Уменьшил отступ */
   }
   
   .section:nth-child(1) .card__title {
@@ -549,11 +548,11 @@
   }
   
   .section:nth-child(1) .card__text {
-    padding-top: 10px;
+    padding-top: 48px; /* Уменьшил отступ */
   }
   
   .section:nth-child(2) .section__content--card-column {
-    gap: 20px;
+    gap: 15px; /* Уменьшил gap */
   }
   
   .section:nth-child(2) .card {
@@ -566,13 +565,13 @@
   }
   
   .section:nth-child(2) .card__text {
-    padding-top: 10px;
+    padding-top: 8px; /* Уменьшил отступ */
   }
   
   .section--tips .tips-header {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    gap: 20px;
+    gap: 8px; /* Уменьшил gap */
     margin-bottom: 0px;
   }
   
@@ -584,7 +583,7 @@
   
   .section--tips .tips-header__subtitle {
       height: 23px;
-      padding: 4px 10px;
+      padding: 4px 0px;
       margin-top: 6px;
   }
   
@@ -593,7 +592,7 @@
   }
   
   .section--tips .card--advice {
-    margin-bottom: 31px;
+    margin-bottom: 23px; /* Уменьшил отступ */
   }
   
   .section--tips .card--advice:first-child {
@@ -602,21 +601,21 @@
   
   .section--tips .card--advice .card__title {
     padding: 0px 0px;
-    margin-bottom: 13px;
+    margin-bottom: 31px; /* Уменьшил отступ */
   }
   
   .section--tips .card--advice .card__text {
-    padding-top: 10px;
+    padding-top: 0px; /* Уменьшил отступ */
   }
   
   .gallery {
-    padding: 0px 0;
+    padding: 0px 0; /* Убрал отступы */
   }
   
   .gallery__grid {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, auto);
-    gap: 20px;
+    gap: 15px; /* Уменьшил gap */
   }
   
   .gallery__image:nth-child(1) {
