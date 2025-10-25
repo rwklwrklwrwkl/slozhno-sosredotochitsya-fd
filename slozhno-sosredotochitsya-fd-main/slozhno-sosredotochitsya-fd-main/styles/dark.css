@@ -1,0 +1,13 @@
+:root.theme-dark {
+  --bg-color: #000028;
+  --bg-image: url("../images/cover-image-dark.png");
+  --text-color: #f1b2ce;
+  --accent-color: #ff0070;
+  --title-color: #db00ff;
+  --menu-button-active: #ff0070;
+  --menu-button-hover: rgba(255, 0, 112, 0.4);
+  --menu-button-focus: #ff0070;
+  --decor-color: #ff0070;
+  --text-accent-color: #000028;
+  --accept-color: #ff0070;
+}
