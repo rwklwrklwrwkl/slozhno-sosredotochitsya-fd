@@ -547,7 +547,7 @@
   .text-card--advice:nth-child(3),
   .text-card--advice:nth-child(4),
   .text-card--advice:nth-child(5) {
-    margin-top: 20px; /* или нужное вам значение */
+    margin-top: 20px;
   }
 
   .text-card--advice .text-card__title {
@@ -747,13 +747,13 @@
     font-size: 18px;
     line-height: 1.3;
     font-weight: 400;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
   
   .content-section--tips .content-section__body--tips {
     display: flex;
     flex-direction: column;
-    gap: 0;
+    gap: 22px;
     margin-left: auto;
     margin-top: 0;
     margin-bottom: 6px;
@@ -770,7 +770,6 @@
     padding: 2px 0px;
     font-size: 18px;
     line-height: 1.3;
-    margin-top: 10px;
   }
   
   .content-section--tips .text-card--advice .text-card__paragraph {
@@ -778,6 +777,7 @@
     margin: 0 0 12px 0;
     font-size: 18px;
     line-height: 1.3;
+    margin-bottom: 0px;
   }
   
   .content-section--tips .text-card--advice:last-child .text-card__paragraph {
