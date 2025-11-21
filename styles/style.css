@@ -6,12 +6,48 @@
   background-attachment: fixed;
   color: var(--text-color);
   font-family: 'IBM Plex Mono', 'Courier New', Courier, monospace;
+  font-size: 18px;
 }
 
 .page__container {
   max-width: 1024px;
   margin: 0 auto;
   padding: 0 10px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card__title {
+  font-size: 18px;
+  background-color: var(--accent-color);
+  color: var(--text-accent-color);
+  padding: 2px 0;
+  line-height: 1.3;
+  font-weight: 700;
+}
+
+.card__title--regular {
+  font-weight: 400;
+}
+
+.card__content {
+  padding-top: 10px;
+}
+
+.card__paragraph {
+  color: var(--text-color);
+  line-height: 1.3;
+  margin: 0;
+  font-size: 18px;
+}
+
+.title-decor {
+  background-color: var(--accent-color);
+  color: var(--text-accent-color);
 }
 
 .header {
@@ -38,7 +74,7 @@
 .header__theme-menu-button {
   background-color: transparent;
   border: none;
-  padding: 0 5px;
+  padding: 2px 14px;
   cursor: pointer;
   color: var(--accent-color);
   text-transform: lowercase;
@@ -144,44 +180,6 @@
   gap: 15px;
 }
 
-.text-card {
-  display: flex;
-  flex-direction: column;
-  gap: 0px;
-  margin-top: 0px;
-}
-
-.text-card__title {
-  font-size: 18px;
-  background-color: var(--accent-color);
-  color: var(--text-accent-color);
-  padding: 2px 0px;
-  line-height: 1.3;
-  margin-bottom: 0;
-  font-weight: 700;
-}
-
-.text-card__content {
-  padding-top: 10px;
-}
-
-.text-card__paragraph {
-  color: var(--text-color);
-  line-height: 1.3;
-  margin: 0;
-  font-size: 18px;
-}
-
-.text-card__title--regular {
-  font-weight: 400;
-}
-
-.title-decor {
-  background-color: var(--accent-color);
-  color: var(--text-accent-color);
-  width: 97%;
-}
-
 .content-section--tips {
   margin-bottom: 20px;
 }
@@ -208,22 +206,22 @@
   gap: 0;
 }
 
-.text-card--advice {
+.card--advice {
   margin-bottom: 12px;
   position: relative;
 }
 
-.text-card--advice:last-child {
+.card--advice:last-child {
   margin-bottom: 0;
 }
 
-.text-card--advice .text-card__title {
+.card--advice .card__title {
   margin: 0;
   padding: 4px 10px;
   text-align: start;
 }
 
-.text-card--advice .text-card__paragraph {
+.card--advice .card__paragraph {
   margin: 0;
   padding: 8px 0 0 0;
 }
@@ -239,7 +237,6 @@
   margin-bottom: 20px;
   font-weight: 700;
   line-height: 1.3;
-  min-height: 18px;
 }
 
 .gallery__grid {
@@ -300,8 +297,8 @@
   right: 0;
   width: 25px;
   height: 25px;
-  border-top: 1px solid var(--accent-color);
-  border-right: 1px solid var(--accent-color);
+  border-top: 1px solid #353430;
+  border-right: 1px solid #353430;
 }
 
 .decorated-zone::after {
@@ -311,8 +308,8 @@
   left: 0;
   width: 25px;
   height: 25px;
-  border-bottom: 1px solid var(--accent-color);
-  border-left: 1px solid var(--accent-color);
+  border-bottom: 1px solid #353430;
+  border-left: 1px solid #353430;
 }
 
 @media (max-width: 767px) {
@@ -335,24 +332,20 @@
   
   .header__title {
     font-size: clamp(7.25rem, 2.0115rem + 0.0178vw, 8.5rem);
-    margin-top: 0px;
-    letter-spacing: 0px;
+    margin-top: 0;
+    letter-spacing: 0;
   }
   
   .header__text {
     max-width: 100%;
-    margin-bottom: 0px;
-    margin-right: 0px;
-    padding: 0 0 0 0;
+    margin-bottom: 0;
+    margin-right: 0;
+    padding: 0;
   }
 
   .header__theme-menu {
-    margin-top: 0px;
-    margin-right: 10px;;
-  }
-
-  .title-decor {
-    width: 100%;
+    margin-top: 0;
+    margin-right: 10px;
   }
   
   .content {
@@ -363,54 +356,32 @@
     margin-bottom: 42px;
     gap: 15px;
   }
-
-  .content-section--factors .text-card:nth-of-type(2),
-  .content-section--factors .text-card:nth-of-type(3) {
-    margin-top: 14px;
-  }
   
   .content-section__title {
-    margin-bottom: 0px;
+    margin-bottom: 0;
     margin-top: 11px;
   }
 
   .tips-header {
     margin-top: 16px;
-    margin-bottom: 9px;;
+    margin-bottom: 9px;
   }
 
   .tips-header__subtitle {
     margin-top: 16px;
     margin-bottom: 20px;
-    height: 47px;
-    padding: 0 0 0 0px;
+    padding: 0;
   }
 
-  .content-section--tips .text-card--advice:nth-child(2) .text-card__paragraph {
-    padding-top: 6px;
-  }
-  
-  .content-section--tips .text-card--advice:nth-child(3) .text-card__paragraph {
-    padding-top: 4px;
-  }
-  
-  .content-section--tips .text-card--advice:nth-child(4) .text-card__paragraph {
-    padding-top: 2px;
-  }
-  
-  .content-section--tips .text-card--advice:nth-child(5) .text-card__paragraph {
-    padding-top: 0px;
+  .card--advice .card__title {
+    padding: 0;
   }
 
-  .text-card--advice .text-card__title {
-    padding: 0 0 0 0;
-  }
-
-  .content-section--tips .text-card--advice {
+  .content-section--tips .card--advice {
     margin-bottom: 10px;
   }
 
-  .text-card {
+  .card {
     margin-top: 3px;
   }
   
@@ -418,16 +389,16 @@
     gap: 12px;
   }
   
-  .text-card__content {
+  .card__content {
     padding-top: 8px;
   }
 
   .gallery {
-    margin-left: 0px;
+    margin-left: 0;
   }
 
   .gallery__title {
-    margin-bottom: 16px;;
+    margin-bottom: 16px;
   }
 
   .gallery__grid {
@@ -454,7 +425,7 @@
 
 @media (min-width: 768px) and (max-width: 1024px) {
   .page__container {
-    padding: 0 0px;
+    padding: 0;
   }
   
   .header {
@@ -467,21 +438,21 @@
   }
   
   .header__title {
-    font-size: clamp(6.95rem, 1.5625rem + 5.4531vw, 0.8125rem);
-    margin-top: 6px;
-    letter-spacing: 6px;
+    font-size: clamp(6.2rem, 2.5625rem + 6.4531vw, 0.8125rem);
+    margin-top: 9px;
+    letter-spacing: 5px;
   }
   
   .header__text {
-    padding: 0 0 0 0;
+    padding: 0;
     max-width: 364px;
     margin-bottom: 2px;
     margin-right: 20px;
   }
 
   .header__theme-menu {
-    margin-right: 31px;
-    margin-top: 0px;
+    margin-right: 22px;
+    margin-top: 0;
     margin-bottom: 2px;
   }
 
@@ -496,6 +467,7 @@
   .content-section {
     margin-left: 21px;
     gap: 15px;
+    margin-bottom: 43px;
   }
 
   .content-section--why {
@@ -503,7 +475,7 @@
     grid-template-columns: 1fr 2fr;
     gap: 10px;
     align-items: start;
-    margin-bottom: 60px;
+    margin-bottom: 67px;
     margin-left: 20px;
   }
   
@@ -513,60 +485,63 @@
     width: 211px;
   }
 
+  .text-card__paragraph {
+    margin-top: 9px;
+  }
+
   .content-section--factors .content-section__title {
     margin-top: 10px;
   }
   
   .content-section__body {
-    gap: 0px;
+    gap: 25px;
+  }
+
+  .why-title {
+    height: 23px;
+    margin-top: 4px;
   }
   
   .content-section__body--card-column {
     grid-template-columns: repeat(1, 1fr);
-    gap: 15px;
-  }
-
-  .text-card__paragraph {
-    margin-top: 4px;
-  }
-
-  .title-decor {
-    margin-top: 6px;
-    margin-bottom: 0px;
+    gap: 21px;
   }
 
   .tips-header__subtitle {
-    margin-bottom: 19px;
     padding: 0 0 0 0;
+    margin-bottom: 20px;
+    width: 472px;
   }
 
-  .text-card__content {
-    padding-top:10px;
+  .title-decor {
+    width: 472px;
   }
 
-  .text-card--advice {
+  .factor-title {
+    width: 728px;
+    margin-top: 4px;
+    height: 23px;
+  }
+
+  .card__paragraph {
+    margin-top: 4px;
+  }
+
+  .card__content {
+    padding-top: 10px;
+  }
+
+  .card--advice {
     margin-bottom: 30px;
   }
 
-  .text-card--advice:nth-child(3) .text-card__paragraph,
-  .text-card--advice:nth-child(4) .text-card__paragraph,
-  .text-card--advice:nth-child(5) .text-card__paragraph {
-    margin-top: 7px;
+  .card--advice .card__title {
+    padding: 0;
   }
 
-  .text-card--advice:nth-child(3),
-  .text-card--advice:nth-child(4),
-  .text-card--advice:nth-child(5) {
-    margin-top: 20px;
-  }
-
-  .text-card--advice .text-card__title {
-    padding: 0px 0px;
-  }
-
-  .text-card--advice .text-card__paragraph {
-    margin: 0px;
-    padding: 0 0 0 0;
+  .card--advice .card__paragraph {
+    margin: 0;
+    padding: 0;
   }
 
   .tips-header {
@@ -578,11 +553,11 @@
   }
 
   .tips-header__main {
-    margin-top: 4px;
+    margin-top: 0px;
   }
 
   .content-section--tips .content-section__body--tips {
-    margin-left: 0px;
+    margin-left: 0;
   }
 
   .gallery__grid {
@@ -593,11 +568,10 @@
     margin-right: 19px;
   }
 
-  .gallery__title--custom {
-    width: 97%;
-    height: 22px;
+   .gallery-title-custom {
+    width: 98%;
   }
-  
+
   .gallery__image:nth-child(1) {
     grid-column: 1 / 3;
     grid-row: 1 / 2;
@@ -630,12 +604,6 @@
 
   .footer__title {
     font-size: clamp(7.25rem, 6.0115rem + 1.0178vw, 7.5rem);
-    letter-spacing: 3px;
-    color: var(--title-color);
-    text-shadow: 2px 2px 0 var(--accent-color);
-    font-weight: 700;
-    line-height: 0.825;
-    margin-bottom: 0;
     margin-top: 61px;
   }
   
@@ -652,11 +620,11 @@
 
 @media (min-width: 1024px) {
   .page__container {
-    padding: 0 0px;
+    padding: 0;
   }
   
   .header {
-    padding: 0px 0;
+    padding: 0;
   }
   
   .header__theme-menu {
@@ -666,9 +634,9 @@
   
   .header__theme-menu-list {
     flex-direction: row;
-    margin-top: 22px;
-    gap: 33px;
-    margin-left: 32px;
+    margin-top: 19px;
+    gap: 7px;
+    margin-left: 20px;
   }
   
   .header__rec {
@@ -677,22 +645,20 @@
   }
   
   .header__title {
-    font-size: clamp(9.9rem, 0.0000rem + 14.4531vw, 9.8125rem);
+    font-size: clamp(7.9rem, 0rem + 15.4531vw, 9.8125rem);
     margin-top: 3px;
-    letter-spacing: 0px;
+    letter-spacing: 0;
   }
   
   .header__text {
     max-width: 490px;
-    width: 100%;
     margin-bottom: 23px;
     margin-right: 21px;
-    padding: 0 0 0 0;
+    padding: 0;
   }
   
   .content {
-    padding: 0px 0 20px;
-    display: block;
+    padding: 0 0 20px;
   }
   
   .content-section--why {
@@ -700,41 +666,53 @@
     grid-template-columns: 1fr 2fr;
     gap: 10px;
     align-items: start;
-    margin-bottom: 69px;
-    margin-top: 56px;
+    margin-bottom: 44px;
+    margin-top: 55px;
     margin-left: 13px;
   }
 
   .content-section--why .content-section__title {
     margin-left: 7px;
+    margin-top: 0px;
   }
 
-  .text-card__paragraph {
+  .card__paragraph {
     margin-top: 4px;
   }
   
   .content-section__title {
     margin-bottom: 0;
     width: 284px;
-    margin-left: 0px;
+    margin-left: 0;
+  }
+
+  .title-decor { 
+    width: 649px;
+    height: 23px;
   }
   
   .content-section__body {
-    gap: 12px;
+    gap: 0px;
+    margin-left: 41px;
+    margin-top: 5px;
+  }
+
+  .text-card__paragraph {
+    margin-top: 11px;
+    width: 673px;
+    margin-bottom: 23px;
   }
   
-  .text-card__content {
+  .card__content {
     padding-top: 7px;
   }
 
-  .title-decor {
-    margin-top: 4px;
-    height: 23px;
+  .text-card {
+    width: 100%;
   }
 
   .content-section--factors {
-    margin-bottom: 8px;
-    padding: 0px 0;
+    margin-bottom: 0px;
     margin-left: 21px;
     gap: 15px;
   }
@@ -743,80 +721,82 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 12px;
     width: 99%;
+    margin-left: 0px;
+    margin-top: 5px;
   }
 
   .content-section--tips {
-    margin-bottom: 80px;
+    margin-bottom: 71px;
     display: grid;
     gap: 0;
-    margin-left: 0px;
-    margin-top: 38px;
+    margin-left: 0;
+    margin-top: 0px;
+  }
+
+  .factor-title {
+    width: 314px;
+  }
+
+  .factor-text {
+   width: 314px;
   }
   
   .content-section--tips .tips-header {
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 1px;
-    margin-bottom: 0;
+    margin-bottom: 0px;
     align-items: start;
     margin-left: 21px;
-    margin-top: 49px;
+    margin-top: 64px;
   }
   
   .content-section--tips .tips-header__main {
-    font-size: 18px;
     margin: 0;
-    color: var(--accept-color);
-    margin-top: 0px;
+    margin-top: 0;
   }
   
   .content-section--tips .tips-header__subtitle {
     margin: 0;
-    padding: 0px 0px;
-    height: auto;
-    background-color: var(--accent-color);
-    color: var(--text-accent-color);
-    font-size: 18px;
-    line-height: 1.3;
-    font-weight: 400;
+    padding: 0;
     margin-bottom: 20px;
   }
   
   .content-section--tips .content-section__body--tips {
     display: flex;
     flex-direction: column;
-    gap: 22px;
+    gap: 0px;
     margin-left: auto;
     margin-top: 0;
     margin-bottom: 6px;
   }
   
-  .content-section--tips .text-card--advice {
+  .content-section--tips .card--advice {
     margin-bottom: 0;
     padding-top: 0;
-    margin-top: 0px;
+    margin-top: 0;
   }
   
-  .content-section--tips .text-card--advice .text-card__title {
+  .content-section--tips .card--advice .card__title {
     margin: 0 0 4px 0;
-    padding: 2px 0px;
-    font-size: 18px;
-    line-height: 1.3;
+    padding: 2px 0;
   }
   
-  .content-section--tips .text-card--advice .text-card__paragraph {
+  .content-section--tips .card--advice .card__paragraph {
     padding: 0;
     margin: 0 0 12px 0;
-    font-size: 18px;
-    line-height: 1.3;
-    margin-bottom: 0px;
+    margin-bottom: 0;
     margin-top: 4px;
   }
   
-  .content-section--tips .text-card--advice:last-child .text-card__paragraph {
+  .content-section--tips .card--advice:last-child .card__paragraph {
     margin-bottom: 0;
   }
-  
+
+  .gallery-title-custom {
+    width: 98%;
+  }
+
   .gallery__grid {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, auto);
@@ -856,7 +836,7 @@
   }
   
   .footer__title {
-    font-size: clamp(9.5rem, -0.4375rem + 14.4531vw, 9.8125rem);
+    font-size: clamp(8.5rem, -0.4375rem + 14.4531vw, 9.8125rem);
     margin-top: 85px;
   }
   
@@ -871,13 +851,13 @@
   }
 
   .footer-decorated::before {
-  top: 60px;
-  right: 20px;
-}
+    top: 60px;
+    right: 20px;
+  }
 
-.footer-decorated::after {
-  bottom: 0px;
-  left: 20px;
-  top: 763px;
-}
+  .footer-decorated::after {
+    bottom: 0;
+    left: 20px;
+    top: 763px;
+  }
 }
