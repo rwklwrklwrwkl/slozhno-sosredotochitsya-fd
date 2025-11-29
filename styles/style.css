@@ -548,7 +548,7 @@
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 11px;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
     margin-top: 40px;
   }
 
@@ -557,7 +557,11 @@
   }
 
   .content-section--tips .content-section__body--tips {
-    margin-left: 0;
+    padding-right: 20px;
+  }
+
+   .content-section--tips .card--advice {
+    padding-right: 90px;
   }
 
   .gallery__grid {
@@ -603,7 +607,7 @@
   }
 
   .footer__title {
-    font-size: clamp(7.25rem, 6.0115rem + 1.0178vw, 7.5rem);
+    font-size: clamp(6.25rem, 6.0115rem + 1.0178vw, 7.5rem);
     margin-top: 61px;
   }
   
