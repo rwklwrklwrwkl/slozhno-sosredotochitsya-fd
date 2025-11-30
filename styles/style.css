@@ -327,11 +327,12 @@
   }
 
   .header__theme-menu-list {
-    gap: 17px
+    gap: 14px;
+    margin-bottom: 6px;
   }
   
   .header__title {
-    font-size: clamp(7.25rem, 2.0115rem + 0.0178vw, 8.5rem);
+    font-size: clamp(6.25rem, 2.0115rem + 0.0178vw, 8.5rem);
     margin-top: 0;
     letter-spacing: 0;
   }
@@ -345,7 +346,7 @@
 
   .header__theme-menu {
     margin-top: 0;
-    margin-right: 10px;
+    margin-right: 0px;
   }
   
   .content {
@@ -354,7 +355,7 @@
   
   .content-section {
     margin-bottom: 42px;
-    gap: 15px;
+    gap: 19px;
   }
   
   .content-section__title {
@@ -363,7 +364,7 @@
   }
 
   .tips-header {
-    margin-top: 16px;
+    margin-top: 7px;
     margin-bottom: 9px;
   }
 
@@ -381,12 +382,25 @@
     margin-bottom: 10px;
   }
 
+  .text-card__paragraph {
+    margin-top: 10px;
+    line-height: 23.4px;
+  }
+
+  .tips-header__main {
+    margin-bottom: 4px;
+  }
+
+  .title-decor {
+    height: 23px;
+  }
+
   .card {
     margin-top: 3px;
   }
   
   .content-section__body {
-    gap: 12px;
+    gap: 20px;
   }
   
   .card__content {
@@ -398,7 +412,7 @@
   }
 
   .gallery__title {
-    margin-bottom: 16px;
+    margin-bottom: 11px;
   }
 
   .gallery__grid {
@@ -408,7 +422,7 @@
 
   .footer__title {
     margin-top: 54px;
-    font-size: clamp(6.25rem, 7.0115rem + 0.0178vw, 7.5rem);
+    font-size: clamp(6.25rem, 6.0115rem + 0.0178vw, 7.5rem);
     margin-left: 4px;
   }
   
@@ -698,7 +712,7 @@
   .content-section__body {
     gap: 0px;
     margin-left: 41px;
-    margin-top: 5px;
+    margin-top: 1px;
   }
 
   .text-card__paragraph {
@@ -718,7 +732,7 @@
   .content-section--factors {
     margin-bottom: 0px;
     margin-left: 21px;
-    gap: 15px;
+    gap: 8px;
   }
   
   .content-section__body--card-column {
@@ -726,7 +740,7 @@
     gap: 12px;
     width: 99%;
     margin-left: 0px;
-    margin-top: 5px;
+    margin-top: 9px;
   }
 
   .content-section--tips {
@@ -764,6 +778,7 @@
     margin: 0;
     padding: 0;
     margin-bottom: 20px;
+    width: 653px;
   }
   
   .content-section--tips .content-section__body--tips {
@@ -773,6 +788,7 @@
     margin-left: auto;
     margin-top: 0;
     margin-bottom: 6px;
+    padding-right: 0px
   }
   
   .content-section--tips .card--advice {
@@ -841,7 +857,7 @@
   
   .footer__title {
     font-size: clamp(8.5rem, -0.4375rem + 14.4531vw, 9.8125rem);
-    margin-top: 85px;
+    margin-top: 82px;
   }
   
   .decorated-zone::before {
