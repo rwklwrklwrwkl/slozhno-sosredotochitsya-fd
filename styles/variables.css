@@ -30,6 +30,10 @@
   :root.theme-auto .header__rec {
     display: none;
   }
+
+  :root.theme-auto .header__theme-menu-button {
+    color: var(--text-color);
+  }
 }
 
 :root.theme-light {
